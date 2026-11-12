@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+
+    <h1>User Login</h1>
+
+    <form>
+        <label>Username:</label>
+        <input type="text" id="username"
+               placeholder="Enter username">
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" id="password"
+               placeholder="Enter password">
+        <br><br>
+
+        <button type="button" onclick="login()">
+            Login
+        </button>
+    </form>
+
+    <h3 id="result"></h3>
+
+    <script>
+    function login() {
+        var username =
+            document.getElementById("username").value;
+
+        var password =
+            document.getElementById("password").value;
+
+        if(username == "admin" && password == "1234") {
+            document.getElementById("result").innerHTML =
+                "Login Successful!";
+        } else {
+            document.getElementById("result").innerHTML =
+                "Invalid Login!";
+        }
+    }
+    </script>
+
+</body>
+</html>
